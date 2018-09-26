@@ -6,6 +6,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
+/**
+ * Обертка над классом User содержащая информацию о его аккаунте
+ */
 public class MyUserPrincipal implements UserDetails {
     private User user;
 

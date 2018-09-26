@@ -2,6 +2,7 @@ package com.javamaster.service;
 
 import com.javamaster.dao.UserDao;
 import com.javamaster.domain.User;
+import com.javamaster.exceptions.ConnectionException;
 import com.javamaster.exceptions.DBException;
 import com.javamaster.exceptions.UserExistException;
 
@@ -14,7 +15,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User getUser(String name) throws DBException {
+    public User getUser(String name) throws DBException, ConnectionException {
        return userDao.findByName(name);
     }
 }

@@ -4,30 +4,28 @@ package com.javamaster.domain;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * Сущность 'Пользователь'
+ */
 @Entity
 @Table(name = "users")
 public class User {
 
 
     @Id
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "password", nullable = false)
     private String password;
 
 
-
-
-    @OneToMany( mappedBy = "user")
-    private List<Note> notes;
-
-    public List<Note> getNotes() {
-        return notes;
-    }
-
-    public void setNotes(List<Note> notes) {
-        this.notes = notes;
+    @Override
+    public String toString() {
+        return "{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 
     public String getUsername() {

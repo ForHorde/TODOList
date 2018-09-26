@@ -2,6 +2,9 @@ package com.javamaster.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
+/**
+ * Класс для инициализации Spring MVC приложения
+ */
 public class WebAppInitialiser extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
@@ -21,5 +24,7 @@ public class WebAppInitialiser extends AbstractAnnotationConfigDispatcherServlet
         // TODO Auto-generated method stub
         return new String[]{"/"};
     }
+
+
 
 }
